@@ -4,6 +4,7 @@
   body {
     margin: 0;
     padding: 0;
+    font-family: 'EB Garamond', serif;
   }
   html {
     background-image: url("campusmap.jpg");
@@ -11,23 +12,48 @@
     background-repeat: no-repeat;
     height: 100%;
   }
-  .box {
-    width: 80%;
-    border: white;
-    padding: 25px;
-    margin: 25px;
-    height: 200px;
-    background-color: white;
-    border-radius: 15px;
-    height: 600px;
-    margin: auto;
-    margin-top: 80px;
+  #header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: #0058A0;
+  padding: 4px 15px;
+  margin-bottom: 10px;
+}
+#button{
+  padding: ;
+  background-color: : #0058A0;
+  border: solid white;
+  font-size: 30pt;
+  margin-bottom: 20px;
+  margin-top: 12px;
+  text-decoration: none;
+}
+#home {
+  background-color: : #0058A0;
+  border: solid white;
+  font-size: 30pt;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  text-decoration: none;
+}
+.box {
+  width: 80%;
+  border: white;
+  padding: 25px;
+  margin: 25px;
+  height: 200px;
+  background-color: white;
+  border-radius: 15px;
+  height: 575px;
+  margin: auto;
+  margin-top: 20px;
   }
   #july-title {
-    font-family: 'EB Garamond', serif;
     margin-top: -10px;
     margin-left: 50px;
     font-size: 15pt;
+    font-family: 'Abel', sans-serif;
   }
   #dot1 {
     height: 10px;
@@ -38,13 +64,70 @@
     margin-left: 160px;
     margin-top: -35px;
   }
+  #colorcode1 {
+    width: 24%;
+    margin-left: 190px;
+    margin-top: -45px;
+  }
+  #dot2 {
+  height: 11px;
+  width: 11px;
+  background-color: rgb(0,145,69);
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 600px;
+  margin-top: -42px;
+}
+  #colorcode2 {
+    margin-left: 625px;
+    margin-top: -46px;
+    width: 24%;
+  }
+  a:active {
+    transform: translateY(2px);
+  }
+  a {
+    color: white
+  }
+  .day-names {
+    font-family: 'Abel', sans-serif;
+    font-size: 8pt;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-left: 50px;
+  }
+  .weekends {
+    color: rgb(186,186,186);
+  }
+  .weekdays {
+    color: rgb(145,145,145);
+  }
   @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+  @import url('https://fonts.googleapis.com/css?family=Abel');
   </style>
 </head>
 <body>
+  <div id="header">
+  <h1> <strong> Phillips Academy-Summer Session </strong> </h1>
+  <a id="button" href="calender.html"> <strong> Calender <strong> </a>
+  <a id="home" href= "andover-trips.html" onclick ="goHome"> Home </a>
+  </div>
   <div class="box">
-<p id="july-title"> <strong> July </strong> 2018 </p>
-<span id="dot1" ></span>
+  <p id="july-title"> <strong> July </strong> 2018 </p>
+  <span id="dot1"></span>
+  <p id="colorcode1"><strong> Located in Kemper Aditorium between 2:10 - 3:10pm beside College Trip </strong> </p>
+  <span id="dot2"></span>
+  <p id="colorcode2"><strong> Meet in Bus Stop <strong></p>
+  <div class="day-names">
+    <p class="weekends"> Sun </p>
+    <p class="weekdays"> Mon </p>
+    <p class="weekdays"> Tue </p>
+    <p class="weekdays"> Wed </p>
+    <p class="weekdays"> Thu </p>
+    <p class="weekdays"> Fri </p>
+    <p class="weekends"> Sat </p>
+</div>
   </div>
 </body>
 </html>

@@ -9,11 +9,11 @@ body {
   padding: 0;
   font-family: 'EB Garamond', serif;
 }
-html {
-  background-image: url("campusmap.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 100%;
+#background {
+  width: 100%;
+}
+#container {
+  overflow: scroll;
 }
 #header {
   display: flex;
@@ -21,25 +21,16 @@ html {
   color: white;
   background-color: #0058A0;
   padding: 12px 10px;
-  margin-bottom: 23px
 }
-#button{
-  padding: ;
+.interface {
   background-color: : #0058A0;
   border: solid white;
   font-size: 30pt;
   margin-bottom: 20px;
   margin-top: 12px;
   text-decoration: none;
-}
-#home {
-  padding: ;
-  background-color: : #0058A0;
-  border: solid white;
-  font-size: 30pt;
-  margin-bottom: 20px;
-  margin-top: 12px;
-  text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 a:active {
   transform: translateY(2px);
@@ -52,9 +43,10 @@ a {
 <body>
   <div id="header">
   <h1> <strong> Phillips Academy-Summer Session </strong> </h1>
-  <a id="button" href="calendar.html"> <strong> Calendar <strong> </a>
-  <a  id="home" href= "andovder-trips.html" onclick ="goHome"> Home </a>
+  <a class="interface" href="calendar.html"> <strong> Calendar </strong> </a>
+  <a  class="interface" href= "andovder-trips.html" onclick ="goHome"> Home </a>
+  </div>
+<div id="container">
+    <img src="campusmap.jpg" id="background" class="strecth">
   </div>
 </body>
-<script>
-</script>
