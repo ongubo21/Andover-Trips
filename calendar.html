@@ -1,4 +1,4 @@
-<<html>
+<html>
 <head>
   <style>
   body {
@@ -129,7 +129,7 @@
   }
   .day {
     width: 12%;
-    border: 1px solid gray;
+    border: 1px solid #e0e0e0;
     font-size: 8pt;
     text-align: right;
     height: 100px;
@@ -154,6 +154,10 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: stretch;
+}
+.underline {
+  text-decoration: underline;
+  text-decoration-color: red;
 }
   </style>
 </head>
@@ -196,13 +200,13 @@
       <p class="bus-stop events"> The Loop 11am - 5pm -- $10 </p>
     </div>
     <div class="mondays second-week day"> 9
-      <p class="kemper events underline"> Opening Session! </p>
+      <p class="kemper events underline">Opening Session!</p>
     </div>
     <div class="tuesdays second-week day"> 10
       <p class="kemper events"> International Student for U.S. College </p>
     </div>
     <div class="wednesdays second-week day"> 11
-    <p class="kemper events underline" onclick="collegeTrips1()"> College Trips </p>
+    <p class="kemper events underline">College Trips</p>
     </div>
     <div class="thursdays second-week day"> 12
       <p class="kemper events"> A look inside College Admissions </p>
@@ -227,10 +231,10 @@
       <p class="kemper events"> Who gets in and Why? </p>
     </div>
     <div class="wednesdays third-week day"> 18
-      <p class="kemper events underline" onlick="collegeTrips2()"> College Trips </p>
+      <p class="kemper events underline">College Trips</p>
     </div>
     <div class="thursdays third-week day"> 19
-      <p class="kemper events underline"> Annual College Fair 6-7:30pm </p>
+      <p class="kemper events underline">Annual College Fair 6-7:30pm</p>
     </div>
     <div class="fridays third-week day"> 20
       <p class="kemper events"> Holistic Admissions at Colleges </p>
@@ -240,22 +244,52 @@
     </div>
   </div>
   <div class="week">
-    <div class="sundays fourth-week day"> 22 </div>
-    <div class="mondays fourth-week day"> 23 </div>
-    <div class="tuesdays fourth-week day"> 24 </div>
-    <div class="wednesdays fourth-week day"> 25 </div>
-    <div class="thursdays fourth-week day"> 26 </div>
-    <div class="fridays fourth-week day"> 27 </div>
-    <div class="saturdays fourth-week day"> 28 </div>
+    <div class="sundays fourth-week day"> 22
+      <p class="bus-stop events"> Water Country 11am - 5pm --$50 </p>
+    </div>
+    <div class="mondays fourth-week day"> 23
+      <p class="kemper events"> Evaluating College Application Essay </p>
+    </div>
+    <div class="tuesdays fourth-week day"> 24
+      <p class="kemper events"> The Interview: Tips for Success </p>
+    </div>
+    <div class="wednesdays fourth-week day"> 25
+      <p class="kemper events underline">College Trips</p>
+    </div>
+    <div class="thursdays fourth-week day"> 26
+      <p class="kemper events"> How to Address Supplemental Essays </p>
+    </div>
+    <div class="fridays fourth-week day"> 27
+      <p class="kemper events"> Managing your Social Media </p>
+    </div>
+    <div class="saturdays fourth-week day"> 28
+      <p class="bus-stop events"> Boston Trip 12 - 5pm -- $10 ; Mall at Rockingham
+        Park 1 - 6pm -- $10 </p>
+    </div>
   </div>
   <div class="week">
-    <div class="sundays fifth-week day"> 29 </div>
-    <div class="mondays fifth-week day"> 30 </div>
-    <div class="tuesdays fifth-week day"> 31 </div>
-    <div class="wednesdays fifth-week day august"> Aug 1 </div>
-    <div class="thursdays fifth-week day august"> 2 </div>
-    <div class="fridays fifth-week day august"> 3 </div>
-    <div class="saturdays fifth-week day august"> 4 </div>
+    <div class="sundays fifth-week day"> 29
+      <p class="bus-stop events"> Whale Watch 11am - 4pm --$40 ; Hampton Beach
+      10:30 - 5pm -- $10 </p>
+    </div>
+    <div class="mondays fifth-week day"> 30
+      <p class="kemper events"> Interactive Experience with College Admissions </p>
+    </div>
+    <div class="tuesdays fifth-week day"> 31
+      <p class="kemper events"> Choosing your Major </p>
+    </div>
+    <div class="wednesdays fifth-week day august"> Aug 1
+      <p class="kemper events underline">College Trips</p>
+    </div>
+    <div class="thursdays fifth-week day august"> 2
+      <p class="kemper events"> Building your Resume </p>
+    </div>
+    <div class="fridays fifth-week day august"> 3
+      <p class="kemper events underline">Closing Session</p>
+    </div>
+    <div class="saturdays fifth-week day august"> 4
+      <p class="bus-stop events"> Last Night </p>
+    </div>
   </div>
   <div class="week">
     <div class="sundays sixth-week day august"> 5 </div>
@@ -270,5 +304,6 @@
 </div>
   </div>
 </div>
+
 </body>
 </html>
