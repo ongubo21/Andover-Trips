@@ -1,4 +1,4 @@
-<html>
+<<html>
 <head>
   <style>
   body {
@@ -6,19 +6,29 @@
     padding: 0;
     font-family: 'EB Garamond', serif;
   }
-  html {
+  @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+  @import url('https://fonts.googleapis.com/css?family=Abel');
+  /* html {
     background-image: url("campusmap.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100%;
+  } */
+  #background {
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #container {
+    overflow: scroll;
+    background-image: url("campusmap.jpg");
   }
   #header {
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  background-color: #0058A0;
-  padding: 4px 15px;
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #0058A0;
+    padding: 12px 10px;
 }
 #button{
   padding: ;
@@ -29,25 +39,27 @@
   margin-top: 12px;
   text-decoration: none;
 }
-#home {
+.interface {
   background-color: : #0058A0;
   border: solid white;
   font-size: 30pt;
-  margin-bottom: 10px;
-  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-top: 12px;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 .box {
   width: 80%;
   border: white;
   padding: 25px;
   margin: 25px;
-  height: 200px;
   background-color: white;
   border-radius: 15px;
-  height: 575px;
+  height: 800px;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 50px;
   }
   #july-title {
     margin-top: -10px;
@@ -87,7 +99,7 @@
     transform: translateY(2px);
   }
   a {
-    color: white
+    color: white;
   }
   .day-names {
     font-family: 'Abel', sans-serif;
@@ -96,6 +108,8 @@
     justify-content: space-around;
     flex-direction: row;
     margin-left: 50px;
+    width: 80%;
+    margin-left: 175px;
   }
   .weekends {
     color: rgb(186,186,186);
@@ -103,16 +117,53 @@
   .weekdays {
     color: rgb(145,145,145);
   }
-  @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
-  @import url('https://fonts.googleapis.com/css?family=Abel');
+  .august {
+    color: rgb(186,186,186);
+  }
+  .sundays, .saturdays {
+    color: rgb(145,145,145);
+    background-color: rgb(240,240,240);
+  }
+  .sundays, .mondays, .tuesdays, .wednesdays, .thursdays, .fridays, .saturdays {
+    padding: 10px 10px;
+  }
+  .day {
+    width: 12%;
+    border: 1px solid gray;
+    font-size: 8pt;
+    text-align: right;
+    height: 100px;
+  }
+.calendar {
+  height: 90%;
+  width: 80%;
+  margin: 0 auto;
+}
+.bus-stop {
+  color: #009145;
+}
+.kemper {
+  color: #0000FF;
+}
+.events {
+  font-size: 10pt;
+  text-align: left;
+}
+.week {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
   </style>
 </head>
 <body>
   <div id="header">
   <h1> <strong> Phillips Academy-Summer Session </strong> </h1>
-  <a id="button" href="calender.html"> <strong> Calender <strong> </a>
-  <a id="home" href= "andover-trips.html" onclick ="goHome"> Home </a>
+  <a class="interface" href="calender.html"> <strong> Calender </strong> </a>
+  <a class="interface" href="index.html"> Home </a>
   </div>
+  <div id="container">
   <div class="box">
   <p id="july-title"> <strong> July </strong> 2018 </p>
   <span id="dot1"></span>
@@ -127,7 +178,97 @@
     <p class="weekdays"> Thu </p>
     <p class="weekdays"> Fri </p>
     <p class="weekends"> Sat </p>
+  </div>
+    <div class="calendar">
+      <div class="week">
+    <div class="sundays first-week day"> Jul 1 </div>
+    <div class="mondays first-week day"> 2 </div>
+    <div class="tuesdays first-week day"> 3 </div>
+    <div class="wednesdays first-week day"> 4 </div>
+    <div class="thursdays first-week day"> 5 </div>
+    <div class="fridays first-week day"> 6 </div>
+    <div class="saturdays first-week day"> 7
+    <p class="bus-stop events"> Canobie Lake Park 3 - 11pm -- $50 </p>
+    </div>
+  </div>
+  <div class="week">
+    <div class="sundays second-week day"> 8
+      <p class="bus-stop events"> The Loop 11am - 5pm -- $10 </p>
+    </div>
+    <div class="mondays second-week day"> 9
+      <p class="kemper events underline"> Opening Session! </p>
+    </div>
+    <div class="tuesdays second-week day"> 10
+      <p class="kemper events"> International Student for U.S. College </p>
+    </div>
+    <div class="wednesdays second-week day"> 11
+    <p class="kemper events underline" onclick="collegeTrips1()"> College Trips </p>
+    </div>
+    <div class="thursdays second-week day"> 12
+      <p class="kemper events"> A look inside College Admissions </p>
+    </div>
+    <div class="fridays second-week day"> 13
+      <p class="kemper events"> Finding the Right fit for College </p>
+    </div>
+    <div class="saturdays second-week day"> 14
+      <p class="bus-stop events"> Boston Trip 12 - 5pm -- $10 ; Mall at
+        Rockingham Park 1 - 6 pm $10 </p>
+    </div>
+  </div>
+  <div class="week">
+    <div class="sundays third-week day"> 15
+      <p class="bus-stop events"> Miniature Golf 12 - 4pm -- $10 ;
+        Hampton Beach 10:30am - 5:30pm -- $10 </p>
+    </div>
+    <div class="mondays third-week day"> 16
+      <p class="kemper events"> Harvard Information Session </p>
+    </div>
+    <div class="tuesdays third-week day"> 17
+      <p class="kemper events"> Who gets in and Why? </p>
+    </div>
+    <div class="wednesdays third-week day"> 18
+      <p class="kemper events underline" onlick="collegeTrips2()"> College Trips </p>
+    </div>
+    <div class="thursdays third-week day"> 19
+      <p class="kemper events underline"> Annual College Fair 6-7:30pm </p>
+    </div>
+    <div class="fridays third-week day"> 20
+      <p class="kemper events"> Holistic Admissions at Colleges </p>
+    </div>
+    <div class="saturdays third-week day"> 21
+      <p class="bus-stop events"> Outlet Shopping 12:30 - 6:30 pm -- $10 </p>
+    </div>
+  </div>
+  <div class="week">
+    <div class="sundays fourth-week day"> 22 </div>
+    <div class="mondays fourth-week day"> 23 </div>
+    <div class="tuesdays fourth-week day"> 24 </div>
+    <div class="wednesdays fourth-week day"> 25 </div>
+    <div class="thursdays fourth-week day"> 26 </div>
+    <div class="fridays fourth-week day"> 27 </div>
+    <div class="saturdays fourth-week day"> 28 </div>
+  </div>
+  <div class="week">
+    <div class="sundays fifth-week day"> 29 </div>
+    <div class="mondays fifth-week day"> 30 </div>
+    <div class="tuesdays fifth-week day"> 31 </div>
+    <div class="wednesdays fifth-week day august"> Aug 1 </div>
+    <div class="thursdays fifth-week day august"> 2 </div>
+    <div class="fridays fifth-week day august"> 3 </div>
+    <div class="saturdays fifth-week day august"> 4 </div>
+  </div>
+  <div class="week">
+    <div class="sundays sixth-week day august"> 5 </div>
+    <div class="mondays sixth-week day august"> 6 </div>
+    <div class="tuesdays sixth-week day august"> 7 </div>
+    <div class="wednesdays sixth-week day august"> 8 </div>
+    <div class="thursdays sixth-week day august"> 9 </div>
+    <div class="fridays sixth-week day august"> 10 </div>
+    <div class="saturdays sixth-week day august"> 11 </div>
+  </div>
+</div>
 </div>
   </div>
+</div>
 </body>
 </html>
