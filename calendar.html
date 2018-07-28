@@ -8,20 +8,14 @@
   }
   @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
   @import url('https://fonts.googleapis.com/css?family=Abel');
-  /* html {
-    background-image: url("campusmap.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    height: 100%;
-  } */
   #background {
     width: 100%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
   }
   #container {
     overflow: scroll;
     background-image: url("campusmap.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
   #header {
     display: flex;
@@ -58,7 +52,7 @@
   border-radius: 15px;
   height: 800px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 50px;
   }
   #july-title {
@@ -73,12 +67,12 @@
     background-color: rgb(0,0,255);
     border-radius: 50%;
     display: inline-block;
-    margin-left: 160px;
+    margin-left: 200px;
     margin-top: -35px;
   }
   #colorcode1 {
     width: 24%;
-    margin-left: 190px;
+    margin-left: 230px;
     margin-top: -45px;
   }
   #dot2 {
@@ -159,12 +153,56 @@
   text-decoration: underline;
   text-decoration-color: red;
 }
+.collegetrips {
+  width: 20%;
+  height: 675px;
+  border: 2px solid gray;
+  padding: 10px 10px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: left;
+  position: absolute;
+}
+.collegetrips * {
+  background-color: rgba(255,255,255,0.5);
+}
+.college-header {
+  font-size: 15pt;
+  padding-bottom: 7px;
+}
+.university-label {
+  font-size: 12pt;
+  padding-bottom: 2px;
+}
+.college-photos {
+  width: 200px;
+  height: 100px;
+  padding: 2px 2px;
+  margin: 0 auto;
+  display: block;
+}
+#collegetrip1 {
+  left: 825px;
+  top: 150px;
+}
+#collegetrip2 {
+  left: 350px;
+  top: 200px;
+}
+#collegetrip3 {
+  left: 825px;
+  top: 250px;
+}
+#collegetrip4 {
+  left: 350px;
+  top: 300px;
+}
   </style>
 </head>
 <body>
   <div id="header">
   <h1> <strong> Phillips Academy-Summer Session </strong> </h1>
-  <a class="interface" href="calender.html"> <strong> Calendar </strong> </a>
+  <a class="interface" href="calender.html"> <strong> Calender </strong> </a>
   <a class="interface" href="index.html"> Home </a>
   </div>
   <div id="container">
@@ -173,7 +211,7 @@
   <span id="dot1"></span>
   <p id="colorcode1"><strong> Located in Kemper Aditorium between 2:10 - 3:10pm beside College Trip </strong> </p>
   <span id="dot2"></span>
-  <p id="colorcode2"><strong> Meet in Bus Stop <strong></p>
+  <p id="colorcode2"><strong> Meet in Bus Stop</p>
   <div class="day-names">
     <p class="weekends"> Sun </p>
     <p class="weekdays"> Mon </p>
@@ -205,7 +243,7 @@
     <div class="tuesdays second-week day"> 10
       <p class="kemper events"> International Student for U.S. College </p>
     </div>
-    <div class="wednesdays second-week day"> 11
+    <div class="wednesdays second-week day" onmouseover="collegetrip1()" onmouseout="noCollege()"> 11
     <p class="kemper events underline">College Trips</p>
     </div>
     <div class="thursdays second-week day"> 12
@@ -230,7 +268,7 @@
     <div class="tuesdays third-week day"> 17
       <p class="kemper events"> Who gets in and Why? </p>
     </div>
-    <div class="wednesdays third-week day"> 18
+    <div class="wednesdays third-week day" onmouseover="collegetrip2()" onmouseout="noCollege()"> 18
       <p class="kemper events underline">College Trips</p>
     </div>
     <div class="thursdays third-week day"> 19
@@ -253,7 +291,7 @@
     <div class="tuesdays fourth-week day"> 24
       <p class="kemper events"> The Interview: Tips for Success </p>
     </div>
-    <div class="wednesdays fourth-week day"> 25
+    <div class="wednesdays fourth-week day" onmouseover="collegetrip3()" onmouseout="noCollege()"> 25
       <p class="kemper events underline">College Trips</p>
     </div>
     <div class="thursdays fourth-week day"> 26
@@ -278,7 +316,7 @@
     <div class="tuesdays fifth-week day"> 31
       <p class="kemper events"> Choosing your Major </p>
     </div>
-    <div class="wednesdays fifth-week day august"> Aug 1
+    <div class="wednesdays fifth-week day august" onmouseover="collegetrip4()" onmouseout="noCollege()"> Aug 1
       <p class="kemper events underline">College Trips</p>
     </div>
     <div class="thursdays fifth-week day august"> 2
@@ -304,6 +342,88 @@
 </div>
   </div>
 </div>
+</strong>
+<div class="collegetrips" id="collegetrip1">
+  <p class="college-header"><strong> Meet by Bus Stop</strong> </p>
+  <p class="university-label"> Harvard University </p>
+  <img class="college-photos" src="harvarduniversity.jpg"> </img>
+  <p class="university-label"> Tufts University </p>
+  <img class="college-photos" src="TuftsUniversity.jpg"> </img>
+  <p class="university-label"> Brown University </p>
+  <img class="college-photos" src="brownuniversity.jpg"> </img>
+  <p class="university-label"> Northeastern University </p>
+  <img class="college-photos" src="northeasternuniversity.jpg"> </img>
+</div>
+<div class="collegetrips" id="collegetrip2">
+  <p class="college-header"><strong> Meet by Bus Stop</strong> </p>
+  <p class="university-label"> Harvard University </p>
+  <img class="college-photos" src="harvarduniversity.jpg"> </img>
+  <p class="university-label"> MIT University </p>
+  <img class="college-photos" src="mituniversity.jpg"> </img>
+  <p class="university-label"> Brown University </p>
+  <img class="college-photos" src="brownuniversity.jpg"> </img>
+  <p class="university-label"> Wellesley College </p>
+  <img class="college-photos" src="wellesleyCollege.jpg"> </img>
+</div>
+<div class="collegetrips" id="collegetrip3">
+  <p class="college-header"><strong> Meet at Bus Stop</strong> </p>
+  <p class="university-label"> Harvard University </p>
+  <img class="college-photos" src="harvarduniversity.jpg"> </img>
+  <p class="university-label"> Boston University </p>
+  <img class="college-photos" src="bostonuniversity.jpg"> </img>
+  <p class="university-label"> Yale University </p>
+  <img class="college-photos" src="yaleCollege.jpg">
+  <p class="university-label"> Dartmouth College </p>
+  <img class="college-photos" src="dartmouthcollege.jpg"> </img>
+</div>
+<div class="collegetrips" id="collegetrip4">
+  <p class="college-header"><strong> Meet at Bus Stop</strong> </p>
+  <p class="university-label"> Harvard University </p>
+  <img class="college-photos" src="harvarduniversity.jpg"> </img>
+  <p class="university-label"> Amherst College </p>
+  <img class="college-photos" src="armherstcollege.jpg"> </img>
+  <p class="university-label"> Boston College </p>
+  <img class="college-photos" src="bostoncollege.jpg">
+  <p class="university-label"> Tufts University </p>
+  <img class="college-photos" src="TuftsUniversity.jpg"> </img>
+</div>
 
 </body>
+<script>
+var one = document.getElementById("collegetrip1");
+var two = document.getElementById("collegetrip2");
+var three = document.getElementById("collegetrip3");
+var four = document.getElementById("collegetrip4");
+function collegetrip1() {
+  one.style.visibility = "visible";
+  two.style.visibility = "hidden";
+  three.style.visibility = "hidden";
+  four.style.visibility = "hidden";
+}
+function collegetrip2() {
+  one.style.visibility = "hidden";
+  two.style.visibility = "visible";
+  three.style.visibility = "hidden";
+  four.style.visibility = "hidden";
+}
+function collegetrip3() {
+  one.style.visibility = "hidden";
+  two.style.visibility = "hidden";
+  three.style.visibility = "visible";
+  four.style.visibility = "hidden";
+}
+function collegetrip4() {
+  one.style.visibility = "hidden";
+  two.style.visibility = "hidden";
+  three.style.visibility = "hidden";
+  four.style.visibility = "visible";
+}
+function noCollege() {
+  one.style.visibility = "hidden";
+  two.style.visibility = "hidden";
+  three.style.visibility = "hidden";
+  four.style.visibility = "hidden";
+}
+noCollege();
+</script>
 </html>
